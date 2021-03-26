@@ -47,7 +47,7 @@ const web3 = (state: any) => (next: any) => async (action: Action) => {
   /* SUBMIT NEW VALUE*/
   case SUBMIT_VALUE :
       try {        
-        const {contract, inputValue, accounts} = store.contract;
+        const {contract, inputValue, accounts} = store.contractStore;
         console.log("passe par submit value", inputValue);
         console.log('instance:', contract);
         const res = await contract.methods.set(inputValue).send({from: accounts[0]});

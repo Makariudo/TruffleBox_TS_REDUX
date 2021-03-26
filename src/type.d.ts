@@ -23,3 +23,9 @@ interface ContractJSON {
   address: any,
   index: any,
 }
+
+interface propsConnector extends State {
+  newInstance: function,
+  changeField: function,
+  submitValue: function,
+}
